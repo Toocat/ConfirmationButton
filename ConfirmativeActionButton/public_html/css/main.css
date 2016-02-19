@@ -1,0 +1,15 @@
+/* 
+    Created on : Feb 20, 2016, 12:45:31 AM
+    Author     : ecivic (edo.civic@mail.com)
+*/
+
+.confirmativeActionButton {
+    background-color: green;
+}
+.confirmativeActionButtonWaitingForConfirmation {
+    background-color: red;
+}
+.confirmativeActionButtonConfirmed {
+    background-color: blue;
+}
+

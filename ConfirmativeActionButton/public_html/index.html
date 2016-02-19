@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+All code is ownership of Toocat d.o.o.
+Any usage without permission is strongly prohibited.
+All rights reserved.
+-->
+<html>
+    <head>
+        <title>jQuery confirmativeActionButton plugin demo page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="lib/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="src/confirmableActionButton.js" type="text/javascript"></script>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="main">
+            <script>
+                $("#main").confirmativeActionButton({id: "actionButton1", caption: "Click me!", waitingTime: 5000, actionHandler: function () {
+                        alert("Clicked!");
+                    }});
+
+                $("#main").confirmativeActionButton({id: "actionButton2",
+                    caption: "Click me!",
+                    waitingTime: 3000,
+                    cssNormalClass: "confirmativeActionButton",
+                    cssWaitingClass: "confirmativeActionButtonWaitingForConfirmation",
+                    cssActivatedClass: "confirmativeActionButtonConfirmed",
+                    actionHandler: function () {
+                        alert("Clicked!");
+                    }});
+            </script>
+        </div>
+    </body>
+</html>
