@@ -1,0 +1,33 @@
+/* 
+    Created on : Feb 20, 2016, 12:45:31 AM
+    Author     : ecivic (edo.civic@mail.com)
+*/
+button {
+    margin: 5px;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.3rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+button:focus {
+    outline:0 !important;
+}
+.confirmativeActionButton {
+    background-color: green;
+}
+.confirmativeActionButtonWaitingForConfirmation {
+    background-color: red;
+    animation: blinker 1s linear infinite;
+}
+.confirmativeActionButtonConfirmed {
+    background-color: blue;
+}
+@keyframes blinker {  
+  50% { opacity: 0.0; }
+}
+
+

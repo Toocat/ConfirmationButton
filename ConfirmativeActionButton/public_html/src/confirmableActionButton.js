@@ -40,7 +40,7 @@
                     cmp.addClass(cssNormalClass)
                         .removeClass(cssActivatedClass)
                         .removeClass(cssWaitingClass);
-                    cmp.val(oldCaption[targetId]);
+                    cmp.text(oldCaption[targetId]);
                     oldCaption[targetId] = "";
                     if (actionHandler !== null) {
                         actionHandler(cmp);
@@ -50,7 +50,7 @@
                     var target = $("#" + targetId);
                     cmp.prop('toConfirm', true);
                     oldCaption[targetId] = cmp.val();
-                    cmp.val(confirmationCaption);
+                    cmp.text(confirmationCaption);
                     cmp.removeClass().addClass(cssWaitingClass);
                     confirmationTimeouts[targetId] = window.setTimeout(function () {
                         if (target.prop('toConfirm')) {
@@ -97,7 +97,7 @@
     };
 
     $.fn.getConfirmativeActionButtonHTMLTemplate = function (id, caption, cssNormalClass) {
-        return '<input id="' + id + '" name="' + id + '" type="button" value="' + caption + '" class="' + cssNormalClass + '"/>';
+        return '<button id="' + id + '" name="' + id + '" class="' + cssNormalClass + '">' + caption + '</button>';
     };
 
     $.fn.confirmativeActionButton = function (options) {

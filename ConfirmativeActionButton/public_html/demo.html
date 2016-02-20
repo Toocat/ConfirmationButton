@@ -7,17 +7,73 @@
         <script src="lib/jquery-2.2.0.min.js" type="text/javascript"></script>
         <script src="src/confirmableActionButton.js" type="text/javascript"></script>
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="css/confirmableActionButton.css" rel="stylesheet" type="text/css"/>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div id="main">
-            <script>
-                $("#main").confirmativeActionButton();
+        <div id="example1">
+            <h1>Just the button.</h1>
+            <div class="code">
+                $("#someDiv").confirmativeActionButton();
+            </div>
+        </div>
+        <div id="example2">
+            <h1>Action handler with expanded waiting time.</h1>
+            <div class="code">
+                $("#someDiv").confirmativeActionButton({id: "actionButton1",<br/> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;caption: "Click me!",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: 5000,<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionHandler: function () {<br/> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("Clicked!");<br/> 
+                    }});
+            </div>
+        </div>
+        <div id="example3">
+            <h1>Custom styling.</h1>
+            <div class="code">
+                $("#someDiv").confirmativeActionButton({id: "actionButton2",<br/> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;caption: "Click me!",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: 5000,<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cssNormalClass: "confirmativeActionButtonCustom",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cssActivatedClass: "confirmativeActionButtonWaitingForConfirmationCustom",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: "confirmativeActionButtonConfirmedCustom",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionHandler: function () {<br/> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("Clicked!");<br/> 
+                    }});
+            </div>
+        </div>
+        <div id="example4">
+            <h1>Self-destruction.</h1>
+            <div class="code">
+                $("#someDiv").confirmativeActionButton({id: "actionButton3",<br/> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionHandler: function (target) {<br/> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target.removeConfirmativeActionButton();<br/> 
+                    }});
+            </div>
+        </div>
+        <div id="example5">
+            <h1>All custom.</h1>
+            <div class="code">
+                $("#someDiv").confirmativeActionButton({id: "actionButton2",<br/> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;caption: "Click me!",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;confirmationCaption: "Please Click to Confirm",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: 2000,<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cssNormalClass: "confirmativeActionButtonCustom",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cssActivatedClass: "confirmativeActionButtonWaitingForConfirmationCustom",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: "confirmativeActionButtonConfirmedCustom",<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionHandler: function () {<br/> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Click confirmed.");<br/> 
+                    }});
+            </div>
+        </div>
+        <script>
+                $("#example1").confirmativeActionButton();
                 
-                $("#main").confirmativeActionButton({id: "actionButton1", caption: "Click me!", waitingTime: 5000, actionHandler: function () {
+                $("#example2").confirmativeActionButton({id: "actionButton1", caption: "Click me!", waitingTime: 5000, actionHandler: function () {
                         alert("Clicked!");
                     }});
 
-                $("#main").confirmativeActionButton({id: "actionButton2",
+                $("#example3").confirmativeActionButton({id: "actionButton2",
                     caption: "Click me!",
                     waitingTime: 3000,
                     cssNormalClass: "confirmativeActionButtonCustom",
@@ -27,11 +83,11 @@
                         alert("Clicked!");
                     }});
                 
-                $("#main").confirmativeActionButton({id: "actionButton3", caption: "Click me!", waitingTime: 5000, actionHandler: function (target) {
+                $("#example4").confirmativeActionButton({id: "actionButton3", actionHandler: function (target) {
                         target.removeConfirmativeActionButton();
                     }});
                 
-                $("#main").confirmativeActionButton({id: "actionButton4",
+                $("#example5").confirmativeActionButton({id: "actionButton4",
                     caption: "Click me",
                     confirmationCaption: "Please Click to Confirm",
                     waitingTime: 2000,
@@ -42,6 +98,5 @@
                         console.log("Click confirmed.");
                     }});
             </script>
-        </div>
     </body>
 </html>
