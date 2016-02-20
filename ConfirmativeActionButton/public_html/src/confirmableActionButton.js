@@ -84,9 +84,10 @@
 
     $.fn.onConfirmativeActionButtonMouseUp = function (e, cssNormalClass, cssActivatedClass) {
         window.setTimeout(function () {
-            $("#" + e.target.id).removeClass(cssActivatedClass);
-            if (!$("#" + e.target.id).prop('toConfirm')) {
-                $("#" + e.target.id).addClass(cssNormalClass);
+            var target = $("#" + e.target.id);
+            target.removeClass(cssActivatedClass);
+            if (!target.prop('toConfirm')) {
+                target.addClass(cssNormalClass);
             }
         }, CLICK_SPEED);
     };
