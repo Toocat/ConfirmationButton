@@ -30,6 +30,17 @@
                 $("#main").confirmativeActionButton({id: "actionButton3", caption: "Click me!", waitingTime: 5000, actionHandler: function (e) {
                         $("#actionButton3").removeConfirmativeActionButton();
                     }});
+                
+                $("#main").confirmativeActionButton({id: "actionButton4",
+                    caption: "Click me",
+                    confirmationCaption: "Please Click to Confirm",
+                    waitingTime: 2000,
+                    cssNormalClass: "confirmativeActionButton",
+                    cssWaitingClass: "confirmativeActionButtonWaitingForConfirmation",
+                    cssActivatedClass: "confirmativeActionButtonConfirmed",
+                    actionHandler: function () {
+                        console.log("Click confirmed.");
+                    }});
             </script>
         </div>
     </body>

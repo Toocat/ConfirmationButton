@@ -22,6 +22,7 @@
         confirmativeActionButton: function (settings) {
             var id = settings.id;
             var caption = settings.caption;
+            var confirmationCaption = settings.confirmationCaption;
             var actionHandler = settings.actionHandler;
             var cssNormalClass = settings.cssNormalClass;
             var cssWaitingClass = settings.cssWaitingClass;
@@ -48,7 +49,7 @@
                 } else {
                     cmp.prop('toConfirm', true);
                     oldCaption[targetId] = cmp.val();
-                    cmp.val('Click to confirm');
+                    cmp.val(confirmationCaption);
                     cmp.removeClass().addClass(cssWaitingClass);
                     confirmationTimeouts[targetId] = window.setTimeout(function () {
                         if ($("#" + targetId).prop('toConfirm')) {
@@ -102,6 +103,7 @@
             // These are the defaults.
             id: methods.guid.apply(this),
             caption: "Confirmative Action Button",
+            confirmationCaption: "Click to confirm",
             actionHandler: null,
             cssNormalClass: null,
             cssWaitingClass: null,
