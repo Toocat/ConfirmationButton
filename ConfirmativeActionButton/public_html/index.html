@@ -16,6 +16,8 @@ All rights reserved.
     <body>
         <div id="main">
             <script>
+                $("#main").confirmativeActionButton();
+                
                 $("#main").confirmativeActionButton({id: "actionButton1", caption: "Click me!", waitingTime: 5000, actionHandler: function () {
                         alert("Clicked!");
                     }});

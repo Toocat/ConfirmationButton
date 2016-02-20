@@ -3,6 +3,9 @@
     Author     : ecivic (edo.civic@mail.com)
 */
 
+input {
+    margin: 5px;
+}
 .confirmativeActionButton {
     background-color: green;
 }

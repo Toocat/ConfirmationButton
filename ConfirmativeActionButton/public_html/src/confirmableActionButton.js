@@ -52,8 +52,9 @@
                     confirmationTimeouts[e.target.id] = window.setTimeout(function () {
                         if ($("#" + e.target.id).prop('toConfirm')) {
                             $("#" + e.target.id).prop('toConfirm', false);
-                            $("#" + e.target.id).addClass(cssNormalClass);
-                            $("#" + e.target.id).removeClass(cssActivatedClass).removeClass(cssWaitingClass);
+                            $("#" + e.target.id).addClass(cssNormalClass)
+                                    .removeClass(cssActivatedClass)
+                                    .removeClass(cssWaitingClass);
                             $("#" + e.target.id).val(oldCaption[e.target.id]);
                             oldCaption[e.target.id] = "";
                         }
@@ -94,7 +95,7 @@
         var settings = $.extend({
             // These are the defaults.
             id: methods.guid.apply(this),
-            caption: "confirmativeActionButton",
+            caption: "Confirmative Action Button",
             actionHandler: null,
             cssNormalClass: null,
             cssWaitingClass: null,
