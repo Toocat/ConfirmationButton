@@ -26,6 +26,10 @@
                     actionHandler: function () {
                         alert("Clicked!");
                     }});
+                
+                $("#main").confirmativeActionButton({id: "actionButton3", caption: "Click me!", waitingTime: 5000, actionHandler: function (e) {
+                        $("#actionButton3").removeConfirmativeActionButton();
+                    }});
             </script>
         </div>
     </body>

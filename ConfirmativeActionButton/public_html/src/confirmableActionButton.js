@@ -32,31 +32,32 @@
             
             var cmp = $("#" + id);
             cmp.click(function (e) {
+                var targetId = e.target.id;
                 var toConfirm = cmp.prop('toConfirm');
                 if (toConfirm) {
                     cmp.prop('toConfirm', false);
                     cmp.addClass(cssNormalClass)
                         .removeClass(cssActivatedClass)
                         .removeClass(cssWaitingClass);
-                    cmp.val(oldCaption[e.target.id]);
-                    oldCaption[e.target.id] = "";
+                    cmp.val(oldCaption[targetId]);
+                    oldCaption[targetId] = "";
                     if (actionHandler !== null) {
                         actionHandler(e);
                     }
-                    clearTimeout(confirmationTimeouts[e.target.id]);
+                    clearTimeout(confirmationTimeouts[targetId]);
                 } else {
                     cmp.prop('toConfirm', true);
-                    oldCaption[e.target.id] = cmp.val();
+                    oldCaption[targetId] = cmp.val();
                     cmp.val('Click to confirm');
                     cmp.removeClass().addClass(cssWaitingClass);
-                    confirmationTimeouts[e.target.id] = window.setTimeout(function () {
-                        if ($("#" + e.target.id).prop('toConfirm')) {
-                            $("#" + e.target.id).prop('toConfirm', false);
-                            $("#" + e.target.id).addClass(cssNormalClass)
+                    confirmationTimeouts[targetId] = window.setTimeout(function () {
+                        if ($("#" + targetId).prop('toConfirm')) {
+                            $("#" + targetId).prop('toConfirm', false);
+                            $("#" + targetId).addClass(cssNormalClass)
                                     .removeClass(cssActivatedClass)
                                     .removeClass(cssWaitingClass);
-                            $("#" + e.target.id).val(oldCaption[e.target.id]);
-                            oldCaption[e.target.id] = "";
+                            $("#" + targetId).val(oldCaption[targetId]);
+                            oldCaption[targetId] = "";
                         }
                     }, waitingTime);
                 }
@@ -72,6 +73,11 @@
                 cmp.onConfirmativeActionButtonMouseDown(e, cssNormalClass, cssActivatedClass);
             });
         }
+    };
+    
+    $.fn.removeConfirmativeActionButton = function() {
+        this.off();
+        this.remove();
     };
 
     $.fn.onConfirmativeActionButtonMouseUp = function (e, cssNormalClass, cssActivatedClass) {
