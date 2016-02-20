@@ -43,7 +43,7 @@
                     cmp.val(oldCaption[targetId]);
                     oldCaption[targetId] = "";
                     if (actionHandler !== null) {
-                        actionHandler(e);
+                        actionHandler(cmp);
                     }
                     clearTimeout(confirmationTimeouts[targetId]);
                 } else {
@@ -105,9 +105,9 @@
             caption: "Confirmative Action Button",
             confirmationCaption: "Click to confirm",
             actionHandler: null,
-            cssNormalClass: null,
-            cssWaitingClass: null,
-            cssActivatedClass: null,
+            cssNormalClass: "confirmativeActionButton",
+            cssWaitingClass: "confirmativeActionButtonWaitingForConfirmation",
+            cssActivatedClass: "confirmativeActionButtonConfirmed",
             waitingTime: 3000
         }, options);
 

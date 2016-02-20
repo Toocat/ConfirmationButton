@@ -15,4 +15,13 @@ input {
 .confirmativeActionButtonConfirmed {
     background-color: blue;
 }
+.confirmativeActionButtonCustom {
+    color: green;
+}
+.confirmativeActionButtonWaitingForConfirmationCustom {
+    color: red;
+}
+.confirmativeActionButtonConfirmedCustom {
+    color: blue;
+}
 
