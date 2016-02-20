@@ -11,6 +11,7 @@ input {
 }
 .confirmativeActionButtonWaitingForConfirmation {
     background-color: red;
+    animation: blinker 1s linear infinite;
 }
 .confirmativeActionButtonConfirmed {
     background-color: blue;
@@ -20,8 +21,14 @@ input {
 }
 .confirmativeActionButtonWaitingForConfirmationCustom {
     color: red;
+    animation: blinker 1s linear infinite;
 }
 .confirmativeActionButtonConfirmedCustom {
     color: blue;
 }
+
+@keyframes blinker {  
+  50% { opacity: 0.0; }
+}
+
 

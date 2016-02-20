@@ -47,17 +47,18 @@
                     }
                     clearTimeout(confirmationTimeouts[targetId]);
                 } else {
+                    var target = $("#" + targetId);
                     cmp.prop('toConfirm', true);
                     oldCaption[targetId] = cmp.val();
                     cmp.val(confirmationCaption);
                     cmp.removeClass().addClass(cssWaitingClass);
                     confirmationTimeouts[targetId] = window.setTimeout(function () {
-                        if ($("#" + targetId).prop('toConfirm')) {
-                            $("#" + targetId).prop('toConfirm', false);
-                            $("#" + targetId).addClass(cssNormalClass)
+                        if (target.prop('toConfirm')) {
+                            target.prop('toConfirm', false);
+                            target.addClass(cssNormalClass)
                                     .removeClass(cssActivatedClass)
                                     .removeClass(cssWaitingClass);
-                            $("#" + targetId).val(oldCaption[targetId]);
+                            target.val(oldCaption[targetId]);
                             oldCaption[targetId] = "";
                         }
                     }, waitingTime);
