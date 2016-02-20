@@ -49,7 +49,7 @@
                 } else {
                     var target = $("#" + targetId);
                     cmp.prop('toConfirm', true);
-                    oldCaption[targetId] = cmp.val();
+                    oldCaption[targetId] = cmp.text();
                     cmp.text(confirmationCaption);
                     cmp.removeClass().addClass(cssWaitingClass);
                     confirmationTimeouts[targetId] = window.setTimeout(function () {
@@ -58,7 +58,7 @@
                             target.addClass(cssNormalClass)
                                     .removeClass(cssActivatedClass)
                                     .removeClass(cssWaitingClass);
-                            target.val(oldCaption[targetId]);
+                            target.text(oldCaption[targetId]);
                             oldCaption[targetId] = "";
                         }
                     }, waitingTime);
