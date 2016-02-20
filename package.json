@@ -1,0 +1,31 @@
+{
+  "name": "confirmativeactionbutton",
+  "version": "1.0.0",
+  "description": "jQuery confirmativeActionButton plugin",
+  "main": "demo.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Toocat/ConfirmativeActionButton.git"
+  },
+  "keywords": [
+    "confirm",
+    "action",
+    "button",
+    "jquery",
+    "plugin",
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "confirmative",
+    "actionbutton",
+    "confirmativeactionbutton"
+  ],
+  "author": "Edo Civic",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Toocat/ConfirmativeActionButton/issues"
+  },
+  "homepage": "https://github.com/Toocat/ConfirmativeActionButton#readme"
+}
