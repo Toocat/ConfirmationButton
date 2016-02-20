@@ -21,49 +21,53 @@
             <h1>Action handler with expanded waiting time.</h1>
             <div class="code">
                 $("#someDiv").confirmativeActionButton({id: "actionButton1",<br/> 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;caption: "Click me!",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: 5000,<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionHandler: function () {<br/> 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("Clicked!");<br/> 
-                    }});
+                <span style="padding-left:5em">caption: "Click me!",</span><br/>
+                <span style="padding-left:5em">waitingTime: 5000,</span><br/>
+                <span style="padding-left:5em">actionHandler: function () {</span><br/> 
+                    <span style="padding-left:10em">alert("Clicked!");</span><br/> 
+                <span style="padding-left:5em">}</span><br/>  
+                    });
             </div>
         </div>
         <div id="example3">
             <h1>Custom styling.</h1>
             <div class="code">
                 $("#someDiv").confirmativeActionButton({id: "actionButton2",<br/> 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;caption: "Click me!",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: 5000,<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cssNormalClass: "confirmativeActionButtonCustom",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cssActivatedClass: "confirmativeActionButtonWaitingForConfirmationCustom",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: "confirmativeActionButtonConfirmedCustom",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionHandler: function () {<br/> 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("Clicked!");<br/> 
-                    }});
+                <span style="padding-left:5em">caption: "Click me!",</span><br/>
+                <span style="padding-left:5em">waitingTime: 5000,</span><br/>
+                <span style="padding-left:5em">cssNormalClass: "confirmativeActionButtonCustom",</span><br/>
+                <span style="padding-left:5em">cssActivatedClass: "confirmativeActionButtonWaitingForConfirmationCustom",</span><br/>
+                <span style="padding-left:5em">waitingTime: "confirmativeActionButtonConfirmedCustom",</span><br/>
+                <span style="padding-left:5em">actionHandler: function () {</span><br/> 
+                    <span style="padding-left:10em">"alert("Clicked!");</span><br/> 
+                <span style="padding-left:5em">}</span><br/>  
+                    });
             </div>
         </div>
         <div id="example4">
             <h1>Self-destruction.</h1>
             <div class="code">
                 $("#someDiv").confirmativeActionButton({id: "actionButton3",<br/> 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionHandler: function (target) {<br/> 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target.removeConfirmativeActionButton();<br/> 
-                    }});
+                <span style="padding-left:5em">actionHandler: function (target) {</span><br/> 
+                    <span style="padding-left:10em">target.removeConfirmativeActionButton();</span><br/>
+                <span style="padding-left:5em">}</span><br/>  
+                    });
             </div>
         </div>
         <div id="example5">
             <h1>All custom.</h1>
             <div class="code">
                 $("#someDiv").confirmativeActionButton({id: "actionButton2",<br/> 
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;caption: "Click me!",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;confirmationCaption: "Please Click to Confirm",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: 2000,<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cssNormalClass: "confirmativeActionButtonCustom",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cssActivatedClass: "confirmativeActionButtonWaitingForConfirmationCustom",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waitingTime: "confirmativeActionButtonConfirmedCustom",<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actionHandler: function () {<br/> 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Click confirmed.");<br/> 
-                    }});
+                <span style="padding-left:5em">caption: "Click me!",</span><br/>
+                <span style="padding-left:5em">confirmationCaption: "Please Click to Confirm",</span><br/>
+                <span style="padding-left:5em">waitingTime: 2000,</span><br/>
+                <span style="padding-left:5em">cssNormalClass: "confirmativeActionButtonCustom",</span><br/>
+                <span style="padding-left:5em">cssActivatedClass: "confirmativeActionButtonWaitingForConfirmationCustom",</span><br/>
+                <span style="padding-left:5em">waitingTime: "confirmativeActionButtonConfirmedCustom",</span><br/>
+                <span style="padding-left:5em">actionHandler: function () {</span><br/> 
+                    <span style="padding-left:10em">console.log("Click confirmed.");</span><br/> 
+                <span style="padding-left:5em">}</span><br/>         
+                    });
             </div>
         </div>
         <script>
