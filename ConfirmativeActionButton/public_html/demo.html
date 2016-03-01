@@ -5,9 +5,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="lib/jquery-2.2.0.min.js" type="text/javascript"></script>
-        <script src="src/confirmableActionButton.js" type="text/javascript"></script>
+        <script src="src/confirmativeActionButton.js" type="text/javascript"></script>
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
-        <link href="css/confirmableActionButton.css" rel="stylesheet" type="text/css"/>
+        <link href="css/confirmativeActionButton.css" rel="stylesheet" type="text/css"/>
+        <link href="css/advanced.css" rel="stylesheet" type="text/css"/>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body>
@@ -70,6 +71,22 @@
                     });
             </div>
         </div>
+        <div id="example6">
+            <h1>Advanced CSS.</h1>
+            <div class="code">
+                $("#someDiv").confirmativeActionButton({id: "actionButton6",<br/> 
+                <span style="padding-left:5em">caption: "Click me!",</span><br/>
+                <span style="padding-left:5em">confirmationCaption: "Please Click to Confirm",</span><br/>
+                <span style="padding-left:5em">waitingTime: 3000,</span><br/>
+                <span style="padding-left:5em">cssNormalClass: "advancedCAB",</span><br/>
+                <span style="padding-left:5em">cssWaitingClass: "advancedWaitingCAB",</span><br/>
+                <span style="padding-left:5em">cssActivatedClass: "advancedActivatedCAB",</span><br/>
+                <span style="padding-left:5em">actionHandler: function () {</span><br/> 
+                    <span style="padding-left:10em">console.log("Click confirmed.");</span><br/> 
+                <span style="padding-left:5em">}</span><br/>         
+                    });
+            </div>
+        </div>
         <script>
                 $("#example1").confirmativeActionButton();
                 
@@ -98,6 +115,17 @@
                     cssNormalClass: "confirmativeActionButtonCustom",
                     cssWaitingClass: "confirmativeActionButtonWaitingForConfirmationCustom",
                     cssActivatedClass: "confirmativeActionButtonConfirmedCustom",
+                    actionHandler: function () {
+                        console.log("Click confirmed.");
+                    }});
+                
+                $("#example6").confirmativeActionButton({id: "actionButton6",
+                    caption: "Click me",
+                    confirmationCaption: "Please Click to Confirm",
+                    waitingTime: 3000,
+                    cssNormalClass: "advancedCAB",
+                    cssWaitingClass: "advancedWaitingCAB",
+                    cssActivatedClass: "advancedActivatedCAB",
                     actionHandler: function () {
                         console.log("Click confirmed.");
                     }});

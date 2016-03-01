@@ -1,6 +1,6 @@
 {
   "name": "confirmativeactionbutton",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "jQuery confirmativeActionButton plugin",
   "main": "demo.html",
   "scripts": {
