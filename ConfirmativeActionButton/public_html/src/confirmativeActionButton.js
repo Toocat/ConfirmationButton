@@ -41,11 +41,12 @@
                         .removeClass(cssActivatedClass)
                         .removeClass(cssWaitingClass);
                     cmp.text(oldCaption[targetId]);
-                    oldCaption[targetId] = "";
+                    delete oldCaption[targetId];
                     if (actionHandler !== null) {
                         actionHandler(cmp);
                     }
                     clearTimeout(confirmationTimeouts[targetId]);
+                    delete confirmationTimeouts[targetId];
                 } else {
                     var target = $("#" + targetId);
                     cmp.prop('toConfirm', true);
@@ -59,7 +60,8 @@
                                     .removeClass(cssActivatedClass)
                                     .removeClass(cssWaitingClass);
                             target.text(oldCaption[targetId]);
-                            oldCaption[targetId] = "";
+                            delete oldCaption[targetId];
+                            delete confirmationTimeouts[targetId];
                         }
                     }, waitingTime);
                 }
