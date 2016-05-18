@@ -13,6 +13,9 @@ body {
 h1 {
     color: #cacaca;
 }
+button {
+    cursor: pointer;
+}
 .code {
     font-family: Verdana;
     color: #777777;
